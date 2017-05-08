@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Ruta completa</name>
+    <description/>
+    <Style id="line-E65100-7588-nodesc-normal">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>7.588</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-E65100-7588-nodesc-highlight">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>11.382</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-E65100-7588-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-E65100-7588-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-E65100-7588-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-E65100-7781-nodesc-normal">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>7.781</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-E65100-7781-nodesc-highlight">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>11.6715</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-E65100-7781-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-E65100-7781-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-E65100-7781-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-E65100-8169-nodesc-normal">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>8.169</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-E65100-8169-nodesc-highlight">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>12.2535</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-E65100-8169-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-E65100-8169-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-E65100-8169-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-E65100-8750-nodesc-normal">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>8.75</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-E65100-8750-nodesc-highlight">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>13.125</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-E65100-8750-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-E65100-8750-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-E65100-8750-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Capa sin título</name>
+      <Placemark>
+        <name>Línea 1</name>
+        <styleUrl>#line-E65100-8169-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -76.578505,2.476431,0
+            -76.5798354,2.4755949,0
+            -76.5801144,2.4752305,0
+            -76.5802217,2.4747803,0
+            -76.5802217,2.4742229,0
+            -76.5803289,2.4736655,0
+            -76.5803504,2.473151,0
+            -76.5805006,2.4726151,0
+            -76.5809512,2.4720577,0
+            -76.5816379,2.4715003,0
+            -76.5824962,2.4705785,0
+            -76.583097,2.4699568,0
+            -76.584599,2.4687563,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Línea 3</name>
+        <styleUrl>#line-E65100-7588-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -76.5844703,2.4688849,0
+            -76.5872598,2.4661623,0
+            -76.588676,2.4644902,0
+            -76.5930319,2.4595595,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Línea 4</name>
+        <styleUrl>#line-E65100-8750-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -76.5928602,2.4598167,0
+            -76.5957355,2.456601,0
+            -76.5967011,2.455915,0
+            -76.5978813,2.4551433,0
+            -76.5991473,2.4545644,0
+            -76.5974951,2.4554005,0
+            -76.5975165,2.4530209,0
+            -76.5976238,2.4522706,0
+            -76.5971303,2.4522277,0
+            -76.5947485,2.4530852,0
+            -76.5933108,2.4540285,0
+            -76.59168,2.456258,0
+            -76.5914226,2.4566225,0
+            -76.5933537,2.4594094,0
+            -76.5913367,2.4563438,0
+            -76.591208,2.4566654,0
+            -76.5895772,2.4572656,0
+            -76.587925,2.4582518,0
+            -76.5860581,2.4594737,0
+            -76.58535,2.4600311,0
+            -76.5843415,2.4608243,0
+            -76.5830112,2.4620034,0
+            -76.5818739,2.4633325,0
+            -76.5808225,2.4651119,0
+            -76.5802646,2.4662052,0
+            -76.5791917,2.4678988,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Línea 5</name>
+        <styleUrl>#line-E65100-7781-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -76.5792775,2.4677487,0
+            -76.5783548,2.4687777,0
+            -76.5780759,2.4693566,0
+            -76.5782261,2.4707071,0
+            -76.5779471,2.4726365,0
+            -76.5779257,2.4737727,0
+            -76.5784192,2.4744802,0
+            -76.5800285,2.475402,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
