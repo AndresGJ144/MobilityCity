@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <script language="JavaScript">
+        function recarga(){
+            location.href=location.href
+        }
+        setInterval('recarga()',60000)
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Mobility City</title>
+    <link rel="icon" href="img/smartcity.png" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet">
+
+    <!-- script -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="validarReg.js"></script>
+    <script src="validarContraseña.js"></script>
+
+
+    <link rel="import" href="verRutasMapa.html">
+    <link rel="import" href="verZonas.php">
+
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <i class="fa fa-play-circle"></i> <span class="light">Mobility</span> City
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#verRutasIndex">Ver Rutas</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#climaZonas">Inf. Zonas</a>
+                </li>
+
+                <!--
+                <li>
+                    <a class="page-scroll" href="#infoRutas">Ver Rutas</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#mapaYeison">Yeison</a>
+                </li>
+                -->
+
+                <li>
+                    <a class="page-scroll" data-toggle="modal" href="#ingresar">INGRESAR</a>
+                </li>
+
+                <li>
+                    <a class="page-scroll" data-toggle="modal" href="#registrar">REGISTRAR</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- ventana modal login -->
+<div class="modal fade" id="ingresar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style=" color:#666;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tituloModalRegistrar">  </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" >
+                <div>
+                    <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+                    <img id="profile-img" style="width: 96px;
+                                    height: 96px;
+                                    margin: 0 auto 10px;
+                                    display: block;
+                                    -moz-border-radius: 50%;
+                                    -webkit-border-radius: 50%;
+                                    border-radius: 50%;"
+                         src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"/>
+                    <p id="profile-name" style="font-size: 16px;
+                                    font-weight: bold;
+                                    text-align: center;
+                                    margin: 10px 0 0;
+                                    min-height: 1em;">
+                    </p>
+                    <form class="form-signin" action="login.php" method="post">
+                                    <span id="reauth-email" style="display: block;
+                                        color: #404040;
+                                        line-height: 2;
+                                        margin-bottom: 10px;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        -moz-box-sizing: border-box;
+                                        -webkit-box-sizing: border-box;
+                                        box-sizing: border-box;">
+
+                                    </span>
+                        <input type="text" id="inputEmail" name="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
+                        <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required>
+                        <div id="remember" class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Ingresar</button>
+                    </form><!-- /form -->
+                    <a href="#" class="forgot-password">
+                        Tienes desactivada tu cuenta!
+                    </a>
+                    <script>
+                        $( document ).ready(function() {
+                            // DOM ready
+
+                            // Test data
+                            /*
+                             * To test the script you should discomment the function
+                             * testLocalStorageData and refresh the page. The function
+                             * will load some test data and the loadProfile
+                             * will do the changes in the UI
+                             */
+                            // testLocalStorageData();
+                            // Load profile if it exits
+                            loadProfile();
+                        });
+
+                        /**
+                         * Function that gets the data of the profile in case
+                         * thar it has already saved in localstorage. Only the
+                         * UI will be update in case that all data is available
+                         *
+                         * A not existing key in localstorage return null
+                         *
+                         */
+                        function getLocalProfile(callback){
+                            var profileImgSrc      = localStorage.getItem("PROFILE_IMG_SRC");
+                            var profileName        = localStorage.getItem("PROFILE_NAME");
+                            var profileReAuthEmail = localStorage.getItem("PROFILE_REAUTH_EMAIL");
+
+                            if(profileName !== null
+                                && profileReAuthEmail !== null
+                                && profileImgSrc !== null) {
+                                callback(profileImgSrc, profileName, profileReAuthEmail);
+                            }
+                        }
+
+                        /**
+                         * Main function that load the profile if exists
+                         * in localstorage
+                         */
+                        function loadProfile() {
+                            if(!supportsHTML5Storage()) { return false; }
+                            // we have to provide to the callback the basic
+                            // information to set the profile
+                            getLocalProfile(function(profileImgSrc, profileName, profileReAuthEmail) {
+                                //changes in the UI
+                                $("#profile-img").attr("src",profileImgSrc);
+                                $("#profile-name").html(profileName);
+                                $("#reauth-email").html(profileReAuthEmail);
+                                $("#inputEmail").hide();
+                                $("#remember").hide();
+                            });
+                        }
+
+                        /**
+                         * function that checks if the browser supports HTML5
+                         * local storage
+                         *
+                         * @returns {boolean}
+                         */
+                        function supportsHTML5Storage() {
+                            try {
+                                return 'localStorage' in window && window['localStorage'] !== null;
+                            } catch (e) {
+                                return false;
+                            }
+                        }
+
+                        /**
+                         * Test data. This data will be safe by the web app
+                         * in the first successful login of a auth user.
+                         * To Test the scripts, delete the localstorage data
+                         * and comment this call.
+                         *
+                         * @returns {boolean}
+                         */
+                        function testLocalStorageData() {
+                            if(!supportsHTML5Storage()) { return false; }
+                            localStorage.setItem("PROFILE_IMG_SRC", "//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" );
+                            localStorage.setItem("PROFILE_NAME", "César Izquierdo Tello");
+                            localStorage.setItem("PROFILE_REAUTH_EMAIL", "oneaccount@gmail.com");
+                        }
+
+                    </script>
+                </div>
+
+
+                <!--
+                <div class = "formLogin" >
+
+                    <form action="login.php" method="post">
+                                    <table border="0">
+                                        <tr>
+                                            <td><label style="font-size: 14pt"><b>Nombre: </b></label></td>
+                                            <td width=80> <input class="form-group has-success" style="border-radius:15px;" type="text" name="loginNombre"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label style="font-size: 14pt"><b>Contraseña: </b></label></td>
+                                            <td witdh=80><input style="border-radius:15px;" type="password" name="loginContra"></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td><input class="btn btn-primary" type="submit" value="Aceptar"></td>
+                                            <td><button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button></td>
+                                        </tr>
+                                    </table>
+                                </form>
+                </div>
+                -->
+            </div>
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <input class="btn btn-primary" type="submit" value="Aceptar">
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<!-- ventana modal registrar -->
+<div class="modal fade" id="registrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tituloModalRegistrar" style="color:black" >Formulario Registrar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="registrar.php" method=POST onsubmit="return validar();">
+                    <table>
+                        <div class="contenedor-inputs">
+                            <tr><label></label>
+                                <td><label for="user" style="color:black">Nombre:</label></td>
+                                <td><input type="text" class="form-Reg" id="Nombre" name="Nombre" placeholder="Nombres" required></td>
+                                <td><input type="text" class="form-Reg" id="Apellido" name="Apellido" placeholder="Apellidos" required></td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="user" style="color:black">Correo:</label></td>
+                                <td><input type="email" class="form-Reg" id="Correo" name="Correo" placeholder="example.@gmail.com" required></td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="user" style="color:black">Zona de residencia:</td>
+                                <td>
+                                    <select id=zonaRes name=zonaRes class="form-Reg" required>
+
+                                        <option value="sur">Zona Sur</option>
+                                        <option value="centro">Zona Centro</option>
+                                        <option value="norte">Zona Norte</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-Reg" id="numCelular" name="numCelular" placeholder="Telefono" ></td>
+
+                            </tr>
+
+                            <tr>
+                                <td><label for="user" style="color:black">Nombre de usuario:</td>
+                                <td><input type="text" class="form-Reg"  class="form-Reg" id="NomUsuario" name="NomUsuario" required></td>
+                                <div class="" id="validarUsuarios"></div>
+
+                            </tr>
+
+                            <tr>
+                                <td><label for="user" style="color:black">Contraseña:</td>
+                                <td><input type="password" class="form-Reg" id="password" name="password" required></td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="user" style="color:black">Confirmar contraseña:</td>
+                                <td><input type="password" class="form-Reg" id="comfPassword" name="comfPassword" required></td>
+                                <div class="" id="divchearsisoniguales"></div>
+                            </tr>
+
+                            <tr>
+                                <td><label for="user" style="color:black">Fecha de nacimiento:</td>
+                                <td><input type="date" class="form-Reg" id="fecNac" name="fecNac" step="1" min="1990-01-01" max="2059-12-31" value="aaaa-mm-dd" required></td>
+                                <!-- <td><input type="date" class="form-Reg" name="fecNac" step="1" min="1990-01-01" max="2059-12-31" value="<?php echo date("Y-m-d");?>"> -->
+                                </td>
+                            </tr>
+                            <input type=hidden class="form-Reg" id="rol" name="rol" value="2">
+
+                            <tr>
+                                <td>
+                                    <input type="submit" id="Registrar" name="buttonRegistrar" value="Registrar" class="btn btn-primary">
+                                    <input type=hidden value="1" name="enviado">
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                </td>
+                            </tr>
+                        </div>
+                    </table>
+                </form>
+
+            </div>
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<!-- Intro Header -->
+<header class="intro" style="color: black;">
+
+    <div class="container" style="margin-left: 300px">
+        <h2>Carousel Example</h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel"  style="width:70%; " >
+            <!-- Indicators -->
+
+            <ol class="carousel-indicators" >
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" style="margin-left: 30px; height: 60%;" >
+                <div class="item active">
+                    <img src="img/Popayan.jpg" alt=" Popayan " style="width:90%;  ">
+                    <div class="carousel-caption">
+                        <h1 class="brand-heading" style="text-align: center">Popayán</h1>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/Buseta.jpg" alt="Buseta" style="width:92%;">
+                    <div class="carousel-caption">
+                        <h1 class="brand-heading" style="text-align: center">Movilidad</h1>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/Maqueta.jpg" alt="Maqueta" style="width:92%;">
+                    <div class="carousel-caption">
+                        <h1 class="brand-heading" style="text-align: center">Innovacion</h1>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+</header>
+
+<!-- Graficos Index -- Jhonny Ortega -->
+<section id="verRutasIndex" class="container content-section text-center">
+    <div id="map"></div>
+    <script>
+        thatDoc.body.appendChild(thatDoc.importNode(content, true));
+    </script>
+
+
+
+</section>
+
+<!-- info zonas Section -->
+<section id="climaZonas" class="container content-section text-center">
+    <!--
+     <h2>Informacion de Zonas</h2>
+     <div id="mapRutaCompleta">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1RRYuv_J8DdykAB5JPEK90csd24s" width="640" height="480"></iframe>
+     </div>
+
+
+     <script>
+        thatDoc_verZonas.body.appendChild(thatDoc_verZonas.importNode(content_verZonas, true));
+     </script>
+    -->
+</section>
+
+<!-- Rutas Section
+
+<section id="infoRutas" class="container content-section text-center">
+
+
+</section>
+-->
+
+<!-- Map Section
+<div class="row">
+
+    <div class="col-lg-1">
+    </div>
+
+    <div class="col-lg-6">
+        <div id="mapaYeison"></div>
+
+    </div>
+</div>
+
+-->
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+
+        <ul class="list-inline banner-social-buttons">
+            <li>
+                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+            </li>
+            <li>
+                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+            </li>
+            <li>
+                <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+            </li>
+        </ul>
+        <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a></p>
+        <p>Copyright &copy; Mobility City 2017</p>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+<script src="vendor/jquery/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjJgBJvp7zUKGegJ4LOa-rtSOi9NOSmXw&sensor=false"></script>
+
+<!-- Theme JavaScript -->
+<script src="js/grayscale.min.js"></script>
+<!--
+<script ype="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjJgBJvp7zUKGegJ4LOa-rtSOi9NOSmXw&callback=initMap_clima" ></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjJgBJvp7zUKGegJ4LOa-rtSOi9NOSmXw&sensor=false"></script>
+
+-->
+<script src="js/mapaInfoClima.js"></script>
+
+</body>
+</html>

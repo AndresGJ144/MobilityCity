@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>      
+
+    <head>  
+
+        <meta charset="utf-8">
+
+        <link href="css/formGraficas.css" rel="stylesheet">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+        <!-- Theme CSS -->
+        <link href="css/grayscale.min.css" rel="stylesheet">
+        <link href="estilos.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+    <br>
+    <br>
+    <h2 style="text-align: center">REPORTES GRAFICOS</h2>
+        <div class="container">
+
+            <form class="well form-horizontal" action="reporteGrafico.php" method="post"  id="contact_form">
+               
+
+                    <!-- Form Name -->
+                    <legend style ="text-align:center;" >Por favor, escoga el rango de fechas para visualizar los datos y luego el tipo de gráfica</legend>
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" style ="color:black;">Fecha Inicial</label>  
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-play"></i></span>
+                                <input  name="initialDate" placeholder="" class="form-control"  type="date" id="initialDate">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" style ="color:black;">Fecha Final</label>  
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-flag"></i></span>
+                                <input  name="finalDate" placeholder="" class="form-control"  type="date" id ="finalDate">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Text input-->
+
+
+
+                    <!-- Select Basic -->
+
+                    <div class="form-group"> 
+                        <label class="col-md-4 control-label" style ="color:black;">Tipo de Gráfica</label>
+                        <div class="col-md-4 selectContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                <select name="typeGraph" class="form-control selectpicker" id ="typeGraph">
+                                    <option value="3" >Por favor seleccione el tipo de gráfica</option>
+                                    <option value ="1" >Lineal</option>
+                                    <option value ="2" >Mountain View</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+
+
+                    <!-- Text input-->
+
+
+
+
+                    <!-- Text area -->
+
+
+
+                    <!-- Success message -->
+                    <div class="alert alert-success" role="alert" id="success_message">Satisfactorio <i class="glyphicon glyphicon-thumbs-up"></i></div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label"></label>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-warning" >Solicitar Gráfica <span class="glyphicon glyphicon-send"></span></button>
+                        </div>
+                    </div>
+
+            </form>
+        </div>
+
+
+
+    </body>
+
+
+
+</html>
