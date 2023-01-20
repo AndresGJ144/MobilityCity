@@ -1,4 +1,4 @@
-# Bienvenido a Mobility City
+# Mobility City
 
 Primero agradezco a los compañeros Yeison Eduardo Caicedo Garzón, Jhonny Aldair Ortega Ortega, Juan Camilo Sánchez Lugo y Juan Sebastián Orduz Vidal porque juntos logramos desarrollar el primer prototipo de MobilityCity. Proyecto realizado para el pregarado de Ingeniería Electrónica y Telecomunicacicones dentro del marco del Laboratorio 3 de Electrónica 2017-I. Este trabajo fue referente para el planteamiento/desarrollo de trabajos posteriores en las materias del pregrado de Ing. Electrónica y Telecomunicaciones, como también para investigaciones (tesis) en SmartCity. 
 
