@@ -6,4 +6,4 @@ MobilityCity ayuda a los usuarios de transporte público de la ciudad de Popayá
 
 Gracias a MobilityCity fuimos los ganadores del reto planteado por la empresa Movilidad Futura S.A.S en el evento denominado “Popayán i: inteligente, incluyente e innovadora”, organizado por el Semillero de Emprendimiento en TIC - StartTic en Mayo de 2017.
 
-(https://github.com/AndresGarzonJ/MobilityCity/raw/master/MobilityCity_1.png)
+![Image text](https://github.com/AndresGarzonJ/MobilityCity/blob/master/MobilityCity_1.png)
