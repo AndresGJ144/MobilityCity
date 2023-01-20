@@ -5,3 +5,5 @@ Primero agradezco a los compañeros Yeison Eduardo Caicedo Garzón, Jhonny Aldai
 MobilityCity ayuda a los usuarios de transporte público de la ciudad de Popayán a tomar las decisiones de movilidad. Mobility City se compone de hardware (maqueta de la ciudad de Popayán con el despliegue de sensores para el tráfico y clima) software (aplicación móvil Android <https://github.com/YeisonHunt/AppMobilityCityMaps> y página web-Base de Datos MySQL, JavaScript, CSS, PHP y HTML). En las aplicaciones se visualizaba la ubicación de los vehiculos, se informaba el nivel de trafico y clima de Popayán-maqueta. 
 
 Gracias a MobilityCity fuimos los ganadores del reto planteado por la empresa Movilidad Futura S.A.S en el evento denominado “Popayán i: inteligente, incluyente e innovadora”, organizado por el Semillero de Emprendimiento en TIC - StartTic en Mayo de 2017.
+
+(https://github.com/AndresGarzonJ/MobilityCity/raw/master/MobilityCity_1.png)
